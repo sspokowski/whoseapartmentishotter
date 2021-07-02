@@ -9,7 +9,8 @@ class ApartmentController {
      */
     getHottestApartment = async (request, response) => {
        const temps = await getHottestApartment();
-       response.send(determineHottest(temps));
+       const hotString = determineHottest(temps);
+       response.send({hottest: hotString});
        return;
     }
 }

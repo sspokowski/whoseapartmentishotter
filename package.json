@@ -7,19 +7,23 @@
   "scripts": {
     "lint": "npx eslint src",
     "nodemon": "npx nodemon  index.js",
-    "start": "node --es-module-specifier-resolution=node index.js",
     "poststart": "npm run test",
-    "test": "newman run test/myRetailService.json"
+    "test": "newman run test/myRetailService.json",
+    "startApi": "node --es-module-specifier-resolution=node index.js",
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public --no-clear && node --es-module-specifier-resolution=node index.js"
   },
   "author": "OldChorno",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongodb": "^3.6.4",
-    "mongoose": "^5.12.0",
+    "mongoose": "^5.13.0",
     "newman": "^5.2.2",
-    "swagger-ui-dist": "^3.45.0"
+    "sirv-cli": "^1.0.0"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
@@ -27,6 +31,14 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "nodemon": "^2.0.7",
-    "standard": "^16.0.3"
+    "standard": "^16.0.3",
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.0",
+    "rollup": "^2.3.4",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-svelte": "^7.0.0",
+    "rollup-plugin-terser": "^7.0.0",
+    "svelte": "^3.0.0"
   }
 }
