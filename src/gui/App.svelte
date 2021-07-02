@@ -4,7 +4,7 @@
 	let hottest;
 
 	onMount(async () => {
-		await fetch(`http://whoseapartmentishottest.com/apartments`)
+		await fetch(`http://localhost:3000/apartments`)
 		.then(r => r.json())
 		.then(data => {
 			hottest = data.hottest; 

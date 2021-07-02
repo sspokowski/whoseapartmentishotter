@@ -9,15 +9,15 @@
     "nodemon": "npx nodemon  index.js",
     "poststart": "npm run test",
     "test": "newman run test/myRetailService.json",
-    "prestart": "node --es-module-specifier-resolution=node index.js",
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public --no-clear"
+    "start": "concurrently \"sirv public --single --no-clear\" \"node --es-module-specifier-resolution=node index.js\" "
   },
   "author": "OldChorno",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
+    "concurrently": "^6.2.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongodb": "^3.6.4",
