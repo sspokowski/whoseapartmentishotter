@@ -1,5 +1,4 @@
 <script>
-	export let name;
 	import { onMount } from "svelte";
 	import Hottest from "./Hottest.svelte";
 	let hottest;
