@@ -10,7 +10,7 @@
     "test": "newman run test/myRetailService.json",
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public --single --no-clear "
+    "start": "sirv public --host $HOST --port $PORT"
   },
   "author": "OldChorno",
   "license": "ISC",
