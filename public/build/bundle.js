@@ -588,7 +588,7 @@ var app = (function () {
     			main = element("main");
     			create_component(hottest_1.$$.fragment);
     			attr_dev(main, "class", "svelte-1tky8bj");
-    			add_location(main, file, 15, 0, 282);
+    			add_location(main, file, 15, 0, 295);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -636,7 +636,7 @@ var app = (function () {
     	let hottest;
 
     	onMount(async () => {
-    		await fetch(`http://localhost:3000/apartments`).then(r => r.json()).then(data => {
+    		await fetch(`http://whoseapartmentishottest.com/apartments`).then(r => r.json()).then(data => {
     			$$invalidate(0, hottest = data.hottest);
     		});
     	});

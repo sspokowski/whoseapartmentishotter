@@ -9,10 +9,10 @@
     "nodemon": "npx nodemon  index.js",
     "poststart": "npm run test",
     "test": "newman run test/myRetailService.json",
-    "startApi": "node --es-module-specifier-resolution=node index.js",
+    "prestart": "node --es-module-specifier-resolution=node index.js",
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public --no-clear && node --es-module-specifier-resolution=node index.js"
+    "start": "sirv public --no-clear"
   },
   "author": "OldChorno",
   "license": "ISC",
