@@ -12,7 +12,7 @@ const __dirname = fileURLToPath(import.meta.url);
 
 //set up server
 const app = express();
-const port = 3000;
+const port = 8083;
 
 app.use(cors());
 
