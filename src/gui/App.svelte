@@ -4,7 +4,7 @@
 	let hottest;
 
 	onMount(async () => {
-		await fetch(`http://localhost:3000/apartments`)
+		await fetch(`https://whosehotterapi.herokuapp.com/apartments`)
 		.then(r => r.json())
 		.then(data => {
 			hottest = data.hottest; 
