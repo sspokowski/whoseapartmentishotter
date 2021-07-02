@@ -23,9 +23,9 @@ app.use(express.urlencoded({ extended: true }));
 //apply routes
 app.use('/', routes);
 
-app.get('*', (request, response)=> {
-    response.sendFile(path.resolve(__dirname, './../src/gui/App.svelte'));
-});
+// app.get('*', (request, response)=> {
+//     response.sendFile(path.resolve(__dirname, './../src/gui/App.svelte'));
+// });
 
 //catch all other routes
 app.use((request, response) => {
