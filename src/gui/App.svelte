@@ -1,20 +1,31 @@
 <script>
 	import { onMount } from "svelte";
 	import Hottest from "./Hottest.svelte";
-	let hottest;
+	let hottests;
 
 	onMount(async () => {
 		await fetch(`https://whosehotterapi.herokuapp.com/apartments`)
 		.then(r => r.json())
 		.then(data => {
-			hottest = data.hottest; 
+			hottests = data; 
 		});
   })
 </script>
+<svelte:head>
+	<title>Seriously, whose is hotter?</title>
+	<html lang="en"/>
+</svelte:head>
 
-<main>
-	<Hottest {hottest} />
-</main>
+{#if hottests}
+	{#each hottests as hottest }
+		<main>
+			<Hottest {hottest} />
+		</main>
+	{/each}
+
+{:else}
+	<p class="loading">loading...</p>
+{/if}
 
 <style>
 	main {
