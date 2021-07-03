@@ -8,12 +8,15 @@
 		.then(r => r.json())
 		.then(data => {
 			hottests = data; 
+		}).catch(error => {
+			window.location.href = '/error.html'
 		});
   })
 </script>
 <svelte:head>
 	<title>Seriously, whose is hotter?</title>
 	<html lang="en"/>
+	<link rel="stylesheet" href="styles.css">
 </svelte:head>
 
 {#if hottests}

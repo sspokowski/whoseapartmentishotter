@@ -3,7 +3,7 @@
 </script>
 
 <article>
-    <h1>It is whose apartment is hottest?! dot com!</h1>
+    <h1>It is whose apartment is hotter?! dot com!</h1>
     <small>
       <b>{hottest.hottest}</b>   
     </small>
