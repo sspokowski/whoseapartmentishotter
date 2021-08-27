@@ -1,35 +1,39 @@
 {
-  "name": "whoseappartmentishotter",
-  "version": "1.0.0",
-  "description": "whose apartment is hotter? dot com!",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "lint": "npx eslint src",
-    "poststart": "npm run test",
-    "test": "newman run test/myRetailService.json",
-    "build": "rollup -c",
-    "dev": "rollup -c -w",
-    "start": "sirv public --host $HOST --port $PORT"
-  },
-  "author": "OldChorno",
-  "license": "ISC",
+  "name": "whosehotter",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
-    "sirv-cli": "^1.0.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.2"
   },
-  "devDependencies": {
-    "eslint": "^7.22.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
-    "standard": "^16.0.3",
-    "@rollup/plugin-commonjs": "^17.0.0",
-    "@rollup/plugin-node-resolve": "^11.0.0",
-    "rollup": "^2.3.4",
-    "rollup-plugin-css-only": "^3.1.0",
-    "rollup-plugin-livereload": "^2.0.0",
-    "rollup-plugin-svelte": "^7.0.0",
-    "rollup-plugin-terser": "^7.0.0",
-    "svelte": "^3.0.0"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
