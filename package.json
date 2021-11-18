@@ -1,32 +1,39 @@
 {
-  "name": "whoseappartmentishotter",
-  "version": "1.0.0",
-  "description": "whose apartment is hotter? dot com!",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "lint": "npx eslint src",
-    "nodemon": "npx nodemon  index.js",
-    "start": "node --es-module-specifier-resolution=node index.js",
-    "poststart": "npm run test",
-    "test": "newman run test/myRetailService.json"
-  },
-  "author": "OldChorno",
-  "license": "ISC",
+  "name": "whosehotter",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
-    "express": "^4.17.1",
-    "mongodb": "^3.6.4",
-    "mongoose": "^5.12.0",
-    "newman": "^5.2.2",
-    "swagger-ui-dist": "^3.45.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.2"
   },
-  "devDependencies": {
-    "dotenv": "^8.2.0",
-    "eslint": "^7.22.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
-    "nodemon": "^2.0.7",
-    "standard": "^16.0.3"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

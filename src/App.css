@@ -1,0 +1,31 @@
+.App {
+  text-align: center;
+}
+
+#backgroundVideo {
+  height: 100%;
+  width: 100%;
+  float: left;
+  top: 0;
+  padding: none;
+  z-index: 0;
+  position: relative; /* optional depending on what you want to do in your app */
+}
+.hot {
+  z-index: 1;
+  position: sticky;
+  left:50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #d4bc7b;
+  border-color: red;
+  border-style: solid;
+}
+
+.stylez { 
+  z-index: -1;
+  background-color: #fe1614;
+}
